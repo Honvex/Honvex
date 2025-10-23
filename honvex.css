@@ -99,7 +99,7 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     z-index: 60;
 }
 
@@ -114,16 +114,19 @@ body {
 }
 
 .nav-logo-icon-inner {
-    width: 1rem;
-    height: 1rem;
-    background-color: white;
-    border-radius: 0.125rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('image/HI_Logo.png');
+    background-size: cover; /* Or use 'contain' if you want full image visible */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.125rem; /* Optional — keep or remove depending on logo shape */
 }
 
 .nav-logo-text {
     font-size: 1.25rem;
     font-weight: 700;
-    color: hsl(var(--foreground));
+    color: #00333C;
 }
 
 /* Mobile Menu Toggle */
@@ -265,6 +268,106 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px 0 hsl(var(--construction-orange) / 0.4);
 }
+.hero-slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  top: 0; left: 0;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.slide-content h1 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+.slide-content p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.btn-hero {
+  background: #007bff;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: #0056b3;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.slider-nav button {
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider-nav button:hover {
+  background: rgba(0,0,0,0.8);
+}
 
 /* Hero Section - Mobile First */
 .hero {
@@ -279,7 +382,7 @@ body {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('image/1.jpg');
+    background-image: url('image/HI_about_image.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -643,7 +746,7 @@ body {
 /* Excellence Section - Mobile First */
 .excellence {
     padding: 3rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('image/1.jpg');
     background-size: cover;
     background-position: center;
     color: white;
