@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://honvex.github.io/Honvex/sitemap.xml
+Sitemap: https://www.honvexinternationals.com/sitemap.xml
