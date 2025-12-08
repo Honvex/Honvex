@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Under Maintenance</title>
+  <style>
+    html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;   /* Prevents scrolling */
+}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+      background-image: url(image/maintanance_organic.jpg);
+      background-size: cover;          /* Ensures image covers entire screen */
+  background-position: center;     /* Centers the image */
+  background-repeat: no-repeat;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+    }
+    .gear {
+      font-size: 5em;
+      animation: spin 4s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    #countdown {
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+    .footer {
+      margin-top: auto;
+      font-size: 0.9em;
+    }
+  </style>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div>
+    <div class="gear">⚙️</div>
+    <h1 id="headline">We’ll be back soon!</h1>
+    <p>Our site is currently under maintenance. Thanks for your patience.</p>
+    <div id="countdown"></div>
+    <div class="footer">Contact us: info@honvexinternationals.com/div>
+  </div>
+
+  <!-- <script>
+    // Countdown Timer (example: 5 minutes)
+    let timeLeft = 5 * 60; // seconds
+    function updateCountdown() {
+      let minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
+      $("#countdown").text("Estimated time left: " + minutes + "m " + seconds + "s");
+      if (timeLeft > 0) {
+        timeLeft--;
+      } else {
+        $("#headline").text("We're back online!");
+        $("#countdown").fadeOut();
+      }
+    }
+    setInterval(updateCountdown, 1000);
+
+    // jQuery animation: fade-in headline
+    $(document).ready(function(){
+      $("#headline").hide().fadeIn(2000);
+    });
+  </script> -->
+</body>
+</html>
